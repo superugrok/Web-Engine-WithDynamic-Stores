@@ -1,0 +1,44 @@
+{
+  "compilerOptions": {
+    "baseUrl": "src",
+    "outDir": "./dist/",
+    "paths": {
+      "*": ["./types/*"], // For initialize global vars types
+      "@App/*": ["./app/*"],
+      "@Store/*": ["./store/*"],
+      "@Assets/*": ["./assets/*"],
+      "@Images/*": ["./assets/images/*"],
+      "@Types/*": ["./types/*"],
+      "@Components/*": ["./app/components/*"],
+      "@Screens/*": ["./screens/*"],
+      "@Constants/*": ["./constants/*"],
+      "@Utils/*": ["./utils/*"],
+      "@Models/*": ["./models/*"],
+      "@Styles/*": ["./styles/*"]
+    },
+    "module": "commonjs", // Указываем модуль генерации кода.
+    "noImplicitAny": false,
+    "preserveConstEnums": true,
+    "removeComments": true,
+    // https://www.sitepoint.com/react-with-typescript-best-practices/
+    "allowJs": true, // Разрешить компиляцию JS-файлов.
+    "skipLibCheck": true, // Пропустить проверку во типов всех файлах объявлений.
+    "esModuleInterop": true, // Отключить импорт пространств имен.
+    "allowSyntheticDefaultImports": true, // Разрешить предустановленные импорты из модулей без предустановленного экспорта.
+    "strict": false, // Включить все опции строгой проверки типов.
+    "forceConsistentCasingInFileNames": true, // Запретить ссылки на один и тот же файл, написанный в другом регистре.
+    "moduleResolution": "node", // Разрешение модулей в стиле Node.js
+    "resolveJsonModule": true, // Включить модули, импортированные с расширением .json
+    "noEmit": true, // Не отправлять вывод (то есть не компилировать код, а только проверить типы).
+    "jsx": "react", // Поддержка JSX в файлах .tsx
+    "sourceMap": true, // Сгенерировать соответствующий файл .map
+    "declaration": true, // Сгенерировать соответствующий файл .d.ts
+    "noUnusedLocals": true, // Cообщать об ошибке при неиспользованных локальных элементах (переменных, функциях, импортах).
+    "noUnusedParameters": false, // Не сообщать об ошибке при неиспользуемых параметрах.
+    "experimentalDecorators": true, // Включить экспериментальную поддержку для декораторов ES.
+    "noFallthroughCasesInSwitch": true, // Сообщать об ошибке при встрече кейсов fallthrough в инструкциях switch.
+    "lib": ["dom", "es2019.array"]
+  },
+  "include": ["./src/**/**/*", "./webpack.config.js"],
+  "exclude": ["node_modules"]
+}

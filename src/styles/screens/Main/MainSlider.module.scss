@@ -1,0 +1,816 @@
+$sliderImagesHoverTransition: transform 1s ease;
+$sliderTextTranslate: translate(0, -1vw);
+$sliderTriangleTranslate: translate(-1vw, 0);
+
+.MainSlider {
+  z-index: 88;
+  width: 1708px;
+  max-width: 100%;
+  min-height: 867px;
+  position: absolute;
+  left: 50%;
+  top: -129px;
+  bottom: -10px;
+  margin: 0;
+  transform: translateX(-50%);
+  box-sizing: border-box;
+
+  [class="slick-list"] {
+    overflow: inherit;
+  }
+
+
+  .SlickSlider,
+  .SlickSlider > div,
+  .SlickSlider > div > div {
+    width: auto;
+    height: auto;
+    position: absolute !important;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    box-sizing: border-box;
+  }
+
+  .SliderBgs {
+    width: 876px;
+    height: 893px;
+    content: ' ';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -450px 0 0 -438px;
+    background-size: 100% 100%;
+    pointer-events: none;
+
+    .BgItem {
+      width: auto;
+      height: auto;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: 1;
+      background-size: 100% 100%;
+    }
+
+    .BgSmoke {
+      background: url("../../../assets/images/screens/Main/smokeBg.png") no-repeat center center;
+      z-index: -1;
+      transition: transform 2.7s ease;
+    }
+
+    .BgFire {
+      background: url("../../../assets/images/screens/Main/fireBg.png") no-repeat center center;
+      z-index: -2;
+      transition: transform 1s ease;
+    }
+  }
+
+  .SlideItem {
+    width: auto;
+    height: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: 0;
+
+
+    .ItemBlockWrap {
+      width: 488px;
+      max-width: 32%;
+      height: auto;
+      position: absolute;
+      left: 5px;
+      top: 0;
+      bottom: 0;
+      font-size: 15px;
+      color: #87879b;
+      text-align: left;
+      white-space: nowrap;
+      z-index: 16;
+
+      .ItemBlock {
+        display: flex;
+        align-items: center;
+        height: 100%;
+
+        .ItemBlockIns {
+          width: 100%;
+          display: inline-block;
+          vertical-align: middle;
+          white-space: normal;
+
+          .ItemBlockInsTitle {
+            width: auto;
+            margin: 0 0 30px 0;
+            line-height: 1.2;
+            font-weight: 800;
+            font-size: 47px;
+            color: #fff;
+            text-transform: uppercase;
+            //transform: $sliderTextTranslate;
+            opacity: 0;
+          }
+
+
+          .ItemBlockInsDescription {
+            width: 290px;
+            max-width: 100%;
+            margin: 0;
+            line-height: 1.72;
+            transform: $sliderTextTranslate;
+            opacity: 0;
+          }
+
+          .ItemBlockTriangles {
+            margin: 35px 0 0 0;
+
+            .Triangle {
+              width: 14px;
+              height: 16px;
+              display: inline-block;
+              vertical-align: top;
+              margin: 0 12px 0 0;
+              background: no-repeat center center url("../../../assets/images/screens/Main/MainSlider/main-slider-triangle.png");
+              transform: $sliderTriangleTranslate;
+              opacity: 0;
+            }
+          }
+        }
+      }
+    }
+
+    .ItemImage {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: auto;
+      height: auto;
+      position: absolute !important;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+
+      .SlideMain {
+        max-height: 100%;
+        height: 54.8vw;
+        margin: 0 auto;
+        box-sizing: border-box;
+      }
+
+      .SlideItemsWrap {
+        width: 60vw;
+        height: 60vw;
+        max-width: 1001px;
+        max-height: 1001px;
+        position: absolute;
+        left: 50%;
+        top: 51%;
+        margin: -30vw 0 0 -30vw;
+        background: no-repeat center center;
+        background-size: 100% 100%;
+
+        .SlideHoverBox {
+          width: 70%;
+          height: 70%;
+          min-width: 245px;
+          min-height: 245px;
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          z-index: 34;
+        }
+
+        .SlideItems {
+          div {
+            transition: $sliderImagesHoverTransition;
+            position: absolute;
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            background-position: center center;
+          }
+        }
+      }
+    }
+  }
+
+  .Slide1 {
+
+    .ItemImg_1 {
+      width: 41.1%;
+      height: 42.6%;
+      min-height: 42.6%;
+      left: 18%;
+      bottom: 4%;
+      z-index: -1;
+      background-image: url('../../../assets/images/screens/Main/MainSlider/slide1/slide_1-elem-00.png');
+    }
+
+    .ItemImgHovered_1 {
+      transform: translate(-2vw, 2vw);
+    }
+
+    .ItemImg_2 {
+      width: 41.1%;
+      height: 42.6%;
+      right: 14%;
+      top: 18%;
+      z-index: -1;
+      background-image: url('../../../assets/images/screens/Main/MainSlider/slide1/slide_1-elem-01.png');
+    }
+
+    .ItemImgHovered_2 {
+      transform: translate(3vw, -3vw);
+    }
+
+    .ItemImg_3 {
+      width: 47.4%;
+      height: 64.3%;
+      left: 50%;
+      bottom: 17%;
+      transform: translate(-50%, 0);
+      z-index: 3;
+      background-image: url('../../../assets/images/screens/Main/MainSlider/slide1/slide_1-elem-02.png');
+    }
+
+    .ItemImgHovered_3 {
+      transform: translate(-54%, 0);
+    }
+
+    .ItemImg_4 {
+      width: 66.8%;
+      height: 64.3%;
+      left: 50%;
+      bottom: 17%;
+      transform: translate(-50%, 0);
+      z-index: 2;
+      background-image: url('../../../assets/images/screens/Main/MainSlider/slide1/slide_1-elem-03.png');
+    }
+
+    .ItemImgHovered_4 {
+      transform: scale(0.85, 1) translate(-60%, 0);
+    }
+
+    .ItemImg_5 {
+      width: 66.8%;
+      height: 64.3%;
+      left: 50%;
+      bottom: 17%;
+      transform: translate(-50%, 0);
+      z-index: 4;
+      background-image: url('../../../assets/images/screens/Main/MainSlider/slide1/slide_1-elem-04.png');
+    }
+
+    .ItemImgHovered_5 {
+      transform: scale(0.85, 1) translate(-60%, 0);
+    }
+
+    .ItemImg_6 {
+      width: 90.1%;
+      height: 76.7%;
+      left: 50%;
+      top: 50%;
+      margin: -47% 0 0 -59%;
+      z-index: 1;
+      background-image: url('../../../assets/images/screens/Main/MainSlider/slide1/slide_1-elem-05.png');
+    }
+
+    .ItemImgHovered_6 {
+      transform: translate(-4vw, -4vw);
+    }
+  }
+
+  .Slide2 {
+    .ItemImg_1 {
+      width: 31.1%;
+      height: 26.7%;
+      left: 39%;
+      top: 14%;
+      z-index: 1;
+      background-image: url('../../../assets/images/screens/Main/MainSlider/slide2/slide_02-elem-01.png');
+    }
+
+    .ItemImgHovered_1 {
+      transform: translate(1.8vw, -1.8vw);
+    }
+
+    .ItemImg_2 {
+      width: 13.3%;
+      height: 20.3%;
+      left: 21%;
+      bottom: 25%;
+      z-index: 1;
+      background-image: url('../../../assets/images/screens/Main/MainSlider/slide2/slide_02-elem-02.png');
+    }
+
+    .ItemImgHovered_2 {
+      transform: rotate(60deg);
+    }
+
+    .ItemImg_3 {
+      width: 27.9%;
+      height: 18.9%;
+      left: 24%;
+      bottom: 23%;
+      z-index: -1;
+      background-image: url('../../../assets/images/screens/Main/MainSlider/slide2/slide_02-elem-03.png');
+    }
+
+    .ItemImgHovered_3 {
+      transform: translate(-2.8vw, 2.8vw);
+    }
+
+    .ItemImg_4 {
+      width: 90.1%;
+      height: 76.7%;
+      left: 50%;
+      top: 50%;
+      margin: -47% 0 0 -59%;
+      z-index: 1;
+      background-image: url('../../../assets/images/screens/Main/MainSlider/slide2/slide_02-elem-04.png');
+    }
+
+    .ItemImgHovered_4 {
+      transform: translate(-6vw, -6vw);
+    }
+  }
+
+  .Slide3 {
+    .ItemImg_1 {
+      width: 20.2%;
+      height: 18.4%;
+      right: 20%;
+      top: 38%;
+      z-index: 1;
+      background-image: url('../../../assets/images/screens/Main/MainSlider/slide3/slide_03-elem-01.png');
+    }
+
+    .ItemImgHovered_1 {
+      transform: translate(1.5vw, -1.5vw);
+    }
+
+    .ItemImg_2 {
+      width: 23.6%;
+      height: 35.6%;
+      left: 12%;
+      top: 32%;
+      z-index: -1;
+      background-image: url('../../../assets/images/screens/Main/MainSlider/slide3/slide_03-elem-02.png');
+    }
+
+    .ItemImgHovered_2 {
+      transform: translate(-10%, 0);
+    }
+
+    .ItemImg_3 {
+      width: 56.9%;
+      height: 32.2%;
+      left: 50%;
+      top: 18%;
+      transform: translate(-55%, 0);
+      z-index: -2;
+      background-image: url('../../../assets/images/screens/Main/MainSlider/slide3/slide_03-elem-03.png');
+    }
+
+    .ItemImgHovered_3 {
+      transform: translate(-55%, -10%);
+    }
+
+    .ItemImg_4 {
+      width: 27.9%;
+      height: 18.9%;
+      left: 24%;
+      bottom: 23%;
+      z-index: -1;
+      background-image: url('../../../assets/images/screens/Main/MainSlider/slide2/slide_02-elem-03.png');
+    }
+
+    .ItemImgHovered_4 {
+      transform: translate(-2.8vw, 2.8vw);
+    }
+
+    .ItemImg_5 {
+      width: 90.1%;
+      height: 76.7%;
+      left: 50%;
+      top: 50%;
+      margin: -47% 0 0 -59%;
+      z-index: 1;
+      background-image: url('../../../assets/images/screens/Main/MainSlider/slide2/slide_02-elem-04.png');
+    }
+
+    .ItemImgHovered_5 {
+      transform: translate(-6vw, -6vw);
+    }
+  }
+}
+
+// styles for active Slide
+.MainSlider {
+  [class="slick-slide slick-active slick-current"] > div > .SlideItem,
+  [class="slick-slide slick-active"] > div > .SlideItem {
+    .ItemBlock {
+      .ItemBlockIns {
+
+        .ItemBlockInsTitle_Animate {
+          animation: opacity-1 0.4s alternate linear 0.35s,
+          translateFromUp 0.4s alternate linear 0.35s;
+          animation-fill-mode: forwards;
+        }
+
+        .ItemBlockInsTitle_WasShown {
+          transform: translate(0, 0);
+          opacity: 1;
+        }
+
+        .ItemBlockInsDescription_Animate {
+          animation: opacity-1 0.4s alternate linear 0.65s,
+          translateFromUp 0.4s alternate linear 0.65s;
+          animation-fill-mode: forwards;
+        }
+
+        .ItemBlockInsDescription_WasShown {
+          transform: translate(0, 0);
+          opacity: 1;
+        }
+
+        .ItemBlockTriangles {
+
+          .Triangle1_Animate {
+            animation: opacity-0_3 0.4s alternate linear 1.15s,
+            translateFromLeft 0.4s alternate linear 1.25s;
+            animation-fill-mode: forwards;
+          }
+
+          .Triangle2_Animate {
+            animation: opacity-0_6 0.4s alternate linear 1.05s,
+            translateFromLeft 0.4s alternate linear 1.15s;
+            animation-fill-mode: forwards;
+          }
+
+          .Triangle3_Animate {
+            animation: opacity-0_9 0.4s alternate linear 0.95s,
+            translateFromLeft 0.4s alternate linear 0.85s;
+            animation-fill-mode: forwards;
+          }
+
+          .Triangle1_WasShown {
+            transform: translate(0, 0);
+            opacity: 0.3;
+          }
+
+          .Triangle2_WasShown {
+            transform: translate(0, 0);
+            opacity: 0.6;
+          }
+
+          .Triangle3_WasShown {
+            transform: translate(0, 0);
+            opacity: 0.9;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Styling the default Slick dots
+.MainSlider {
+  [class="slick-dots"] {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    bottom: 5.6%;
+    padding: 1rem 0;
+    list-style-type: none;
+
+    div {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 9px;
+      position: relative;
+
+      li {
+        height: 7px;
+        width: 20px;
+        display: inline-block;
+        vertical-align: top;
+        margin: 0 -3px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        button {
+          padding: 0 !important;
+          width: 7px;
+          height: 7px;
+          position: relative;
+          display: inline-block;
+          vertical-align: top;
+          text-decoration: none;
+          border: 2px solid #87879b;
+          background: transparent;
+          cursor: pointer;
+          border-radius: 34px;
+          transition: all 0.4s ease;
+
+          &:before {
+            width: auto;
+            height: auto;
+            content: ' ';
+            display: block;
+            position: absolute;
+            left: -3px;
+            right: -3px;
+            top: -3px;
+            bottom: -3px;
+          }
+        }
+      }
+
+      li[class="slick-active"] {
+        margin: 0 3px;
+
+        button {
+          //outline: none !important;
+          width: 20px;
+          background: #2ef9ff;
+          border-color: #2ef9ff;
+        }
+
+        /*@keyframes changeWidth {
+          from {
+            width: 5px;
+            //width: 5px;
+            transform: translate(-5px, 0);
+          }
+          to {
+            background: #2ef9ff;
+            width: 20px;
+            //width: 20px;
+            transform: translate(0, 0);
+          }
+        }*/
+      }
+    }
+  }
+}
+
+// > 1670
+@media (min-width: 1670px) {
+  .SlideItemsWrap {
+    width: 1001px !important;
+    height: 1001px !important;
+    margin: -500px 0 0 -500px !important;
+  }
+
+  .SlideMain {
+    height: auto !important;
+  }
+}
+
+// < 1540
+@media (max-width: 1540px) {
+  .MainSlider {
+    .SlideItem {
+      .ItemBlockWrap {
+        width: 410px;
+
+        .ItemBlock {
+          .ItemBlockIns {
+            .ItemBlockInsTitle {
+              font-size: 38px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1270px) {
+  .MainSlider {
+    [class="slick-dots"] {
+      bottom: 10.6%;
+    }
+  }
+}
+
+// < 1130
+@media (max-width: 1130px) {
+  .MainSlider {
+    height: auto !important;
+    min-height: auto !important;
+    position: relative !important;
+    top: -80px;
+    bottom: auto !important;
+
+    .SlickSlider {
+      position: relative !important;
+      display: block !important;
+      box-sizing: border-box !important;
+      -webkit-user-select: none !important;
+      -moz-user-select: none !important;
+      -ms-user-select: none !important;
+      user-select: none !important;
+      -webkit-touch-callout: none !important;
+      -khtml-user-select: none !important;
+      -ms-touch-action: pan-y !important;
+      touch-action: pan-y !important;
+      -webkit-tap-highlight-color: transparent !important;
+      height: 100% !important;
+    }
+
+    .SlickSlider > div,
+    .SlickSlider > div > div {
+      position: relative !important;
+    }
+
+    .SliderBgs {
+      margin: -540px 0 0 -438px;
+
+      .BgSmoke {
+        //background-size: 100% 100%;
+        background-size: 78vw 79.8vw;
+      }
+
+      .BgFire {
+        //background-size: 100% 100%;
+        background-size: 82.8vw 84.4vw;
+      }
+    }
+
+    .SlideItem {
+      width: auto;
+      height: 100% !important;
+      position: relative !important;
+      display: grid !important;
+      grid-template-areas: "image" "text";
+
+
+      .ItemBlockWrap {
+        grid-area: text !important;
+        width: auto !important;
+        max-width: 100% !important;
+        position: relative !important;
+        top: auto !important;
+        bottom: auto !important;
+        margin: 0 auto;
+        text-align: center;
+
+        .ItemBlock {
+
+          .ItemBlockIns {
+            width: 100%;
+            display: inline-block;
+            vertical-align: middle;
+            white-space: normal;
+
+            .ItemBlockInsTitle {
+              font-size: 30px;
+              font-weight: 400 !important;
+              text-transform: none !important;
+              margin-bottom: 25px !important;
+            }
+
+            .ItemBlockInsDescription {
+              width: 95% !important;
+              margin: 0 auto !important;
+              color: #fff !important;
+              line-height: 1.2 !important;
+            }
+          }
+        }
+      }
+
+      .ItemImage {
+        position: relative !important;
+        grid-area: image !important;
+
+        .SlideMain {
+          height: 71vw;
+          position: relative;
+        }
+
+        .SlideItemsWrap {
+          width: 80vw;
+          height: 80vw;
+          max-width: 1001px;
+          max-height: 1001px;
+          position: absolute;
+          left: 50%;
+          top: 51%;
+          margin: -40vw 0 0 -40vw;
+          background: no-repeat center center;
+          background-size: 100% 100%;
+        }
+      }
+    }
+  }
+
+  .MainSlider {
+    [class="slick-dots"] {
+      position: relative !important;
+      bottom: -40px;
+      margin-top: 0 !important;
+      //padding-right: 11px !important;
+      box-sizing: border-box;
+    }
+  }
+}
+
+// < 960
+@media (max-width: 960px) {
+  .MainSlider {
+    top: 0px;
+
+    [class="slick-dots"] {
+      bottom: -20px;
+    }
+  }
+
+  .ItemBlockInsTitle {
+    font-size: 24px !important;
+  }
+}
+
+// < 418
+@media (max-width: 418px) {
+  .MainSlider {
+ /*   [class="slick-dots"] {
+      bottom: 20px;
+    }*/
+  }
+
+  ItemBlockIns {
+    .ItemBlockInsTitle {
+      font-size: 18px !important;
+    }
+  }
+
+}
+
+// < 400
+@media (max-width: 400px) {
+  .ItemBlockWrap {
+    font: inherit !important;
+  }
+
+  .SliderBgs {
+    margin: -560px 0 0 -438px !important;
+  }
+}
+
+// keyframes
+@keyframes translateFromUp {
+  from {
+    transform: $sliderTextTranslate;
+  }
+
+  to {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes translateFromLeft {
+  from {
+    transform: $sliderTriangleTranslate;
+  }
+
+  to {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes opacity-0_3 {
+  to {
+    opacity: .3;
+  }
+}
+
+@keyframes opacity-0_6 {
+  to {
+    opacity: .6;
+  }
+}
+
+@keyframes opacity-0_9 {
+  to {
+    opacity: .9;
+  }
+}
+
+@keyframes opacity-1 {
+  to {
+    opacity: 1;
+  }
+}

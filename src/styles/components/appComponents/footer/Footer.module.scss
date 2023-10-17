@@ -1,0 +1,312 @@
+.Footer {
+  z-index: 99;
+  grid-area: f;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  .ContactsWrap {
+    position: absolute;
+    left: 0;
+    top: 62%;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+
+    .Contacts {
+      width: 60%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .SocNetworkIconWrap {
+
+        .SocNetworkIcon {
+          display: flex;
+          justify-content: center;
+          transition: all 0.2s ease;
+          filter: brightness(90%);
+
+          &:hover {
+              filter: brightness(250%);
+          }
+        }
+
+        .TgIcon {
+          width: 16px;
+          height: 16px;
+        }
+
+        .YtIcon {
+          width: 19px;
+          height: 13px;
+        }
+
+        .VkIcon {
+          width: 19px;
+          height: 13px;
+        }
+
+        .DcIcon {
+          width: 18px;
+          height: 14px;
+          filter: brightness(140%);
+          box-sizing: border-box;
+
+          &:hover {
+            filter: brightness(300%);
+          }
+        }
+      }
+    }
+
+    .Copyright {
+      margin-top: 7%;
+      font-size: 11px;
+      color: #87879b;
+      text-align: center;
+    }
+  }
+
+
+  .Partners {
+    height: 100%;
+    display: flex;
+    width: 60%;
+    justify-content: space-between;
+    align-items: center;
+
+    .PartnersContainer {
+      display: flex;
+      width: 440px;
+      justify-content: space-between;
+      margin: 0 auto;
+      box-sizing: border-box;
+
+      .PartnerIconWrap {
+        transition: all 0.2s ease;
+        filter: brightness(90%);
+
+        &:hover {
+          filter: brightness(200%);
+        }
+      }
+    }
+  }
+}
+
+// resolution toggle
+.HighResolution {
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.LowResolution {
+  display: none;
+}
+
+@media (max-width: 1280px) {
+  .Footer {
+    justify-content: flex-end;
+    padding-right: 40px;
+
+    .Partners {
+      width: 510px;
+
+      .PartnersSlider {
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+
+        .PartnerIconWrap {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .ArrowPrev,
+        .ArrowNext {
+          position: absolute;
+          top: 50%;
+          width: 33px;
+          height: 35px;
+        }
+
+        .ArrowPrev {
+          left: -40px;
+          transform: translate(0, -50%);
+        }
+
+        .ArrowNext {
+          transform: translate(0, -50%) rotate(180deg);
+          right: -40px;
+        }
+      }
+    }
+  }
+
+  // resolution toggle
+  .HighResolution {
+    display: none;
+  }
+  .LowResolution {
+    display: block;
+    width: 100%;
+  }
+}
+
+@media (max-width: 1130px) {
+  .Footer {
+    flex-direction: column;
+    padding-right: 0;
+
+
+    .Partners {
+      width: 85% !important;
+    }
+
+    .ContactsWrap {
+      position: relative;
+      top: unset;
+
+      .Contacts {
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .Footer {
+    .Partners {
+      width: 80% !important;
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .Footer {
+    padding-bottom: 2%;
+
+    .Partners {
+      width: 77% !important;
+
+      .PartnerIcon {
+        height: 24px !important;
+      }
+
+      .ArrowPrev,
+      .ArrowNext {
+        width: 21px !important;
+        height: 24px !important;
+      }
+
+      .ArrowPrev {
+        left: -27px !important;
+        transform: translate(0, -50%);
+      }
+
+      .ArrowNext {
+        transform: translate(0, -50%) rotate(180deg);
+        right: -27px !important;
+      }
+
+    }
+
+    .ContactsWrap {
+      top: 8%;
+    }
+  }
+}
+
+@media (max-width: 380px) {
+  .Footer {
+    justify-content: space-between;
+
+    .Partners {
+      width: 75% !important;
+
+      .PartnerIcon {
+        height: 16px !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 350px) {
+  .Footer {
+    .Contacts {
+      width: 50% !important;
+
+      .SocNetworkIconWrap {
+        .TgIcon {
+          width: 12px !important;
+          height: 12px !important;
+        }
+
+        .YtIcon {
+          width: 14px !important;
+          height: 10px !important;
+        }
+
+        .VkIcon {
+          width: 14px !important;
+          height: 10px !important;
+        }
+
+        .DcIcon {
+          width: 14px !important;
+          height: 11px !important;
+        }
+      }
+    }
+  }
+  .Copyright {
+    padding: 0 5vw;
+    font-size: 0.6rem !important;
+  }
+}
+
+@media (max-width: 280px) {
+  .Footer {
+    .Partners {
+      .PartnerIcon {
+        height: 14px !important;
+      }
+
+      .ArrowPrev,
+      .ArrowNext {
+        width: 15px !important;
+        height: 18px !important;
+      }
+
+      .ArrowPrev {
+        left: -19px !important;
+        transform: translate(0, -50%);
+      }
+
+      .ArrowNext {
+        transform: translate(0, -50%) rotate(180deg);
+        right: -19px !important;
+      }
+
+    }
+  }
+}
+
+// common
+.PartnerIconWrap {
+  filter: brightness(90%) !important;
+  &:hover {
+    filter: brightness(200%) !important;
+  }
+}

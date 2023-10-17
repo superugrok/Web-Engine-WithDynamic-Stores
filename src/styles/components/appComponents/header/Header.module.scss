@@ -1,0 +1,444 @@
+.Header {
+  z-index: 101;
+  width: 100%;
+  max-width: 1708px;
+  margin: 0 auto;
+  padding: 0 0.3%;
+  /*display: flex;
+  justify-content: space-between;*/
+  display: grid;
+  grid-template-areas: "logo topMenu";
+
+  .HeaderLogo {
+    grid-area: logo;
+    display: flex;
+    box-sizing: border-box;
+    padding-top: 2vw;
+    cursor: auto;
+
+    .LogoIconWrap {
+      position: relative;
+      width: 266px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+
+      .LogoBg {
+        box-sizing: border-box;
+        -webkit-animation-delay: 0s;
+        animation: slidein 1.4s infinite alternate linear;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translate(0, -50%);
+        z-index: 2;
+      }
+
+      .LogoIcon {
+        width: 100%;
+        z-index: 3;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .TopMenu {
+    z-index: 6;
+    width: 100%;
+    grid-area: topMenu;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 1%;
+
+    .TopMenuLink {
+      box-sizing: border-box;
+      white-space: nowrap;
+      height: 100%;
+      margin-left: 3.5vw;
+      border-top: 3px solid rgba(255, 0, 0, 0);
+      display: flex;
+      padding-top: 2vw;
+      align-items: center;
+
+      // Link
+      a {
+        position: relative;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: #fff;
+        font-size: 0.9rem;
+        font-weight: 800;
+
+        &:hover {
+          color: #ccba72;
+          transition: all 0.4s ease;
+        }
+      }
+    }
+
+    .TopMenuLinkHovered {
+      border-top: 3px solid #ccba71;
+      transition: all 0.4s ease;
+    }
+
+    .Notifications {
+      height: 100%;
+      box-sizing: border-box;
+      padding-top: 2vw;
+      display: flex;
+      align-items: center;
+      margin-left: 1.4vw;
+      position: relative;
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+
+      .NotificationIconWrap {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        &:before {
+          content: "";
+          height: 10px;
+          width: 1px;
+          background-color: #616368;
+          position: absolute;
+          top: calc(50% - 4px);
+          left: 0;
+          /*transform: translate(0, -50%);*/
+        }
+
+        .NotificationIconBox {
+          position: relative;
+
+          .NotificationIcon {
+            z-index: 2;
+            cursor: pointer;
+            width: 18px;
+            height: 21px;
+            padding-left: 1.4vw;
+          }
+
+          .NotificationsCircleWrap {
+            z-index: 3;
+            cursor: pointer;
+            width: 15px;
+            height: 15px;
+            background-color: #111;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: 0;
+            right: -5px;
+
+            .NotificationsCircle {
+              width: 14px;
+              height: 14px;
+              background-color: #ff5a00;
+              border-radius: 50%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+
+              span {
+                line-height: 0;
+                font-weight: 600;
+                font-size: 0.55rem;
+              }
+            }
+          }
+
+          .NotificationsPopupWrap {
+            border-radius: 6px;
+            width: 266px;
+            height: 262px;
+            max-height: 262px;
+            box-sizing: border-box;
+            padding: 12px 8px 10px 0;
+            background-color: #41464f;
+            position: absolute;
+            right: -6px;
+            top: 44px;
+
+            &:before {
+              content: "";
+              width: 0;
+              height: 0;
+              border: 0 solid transparent;
+              border-right-width: 6px;
+              border-left-width: 6px;
+              border-bottom: 9px solid #3a3e46;
+              position: absolute;
+              top: -9px;
+              right: 11px;
+            }
+
+            .NotificationsPopup {
+              width: 100%;
+              height: 100%;
+              position: relative;
+              box-sizing: border-box;
+              padding-right: 8px;
+              padding-left: 22px;
+              overflow-x: hidden;
+              overflow-y: auto;
+              // firefox scroll
+              scrollbar-color: rgba(57, 58, 62, 0.9) #41464f;
+              scrollbar-width: thin;
+
+              // webkit scroll
+              &::-webkit-scrollbar {
+                width: 0.5rem;
+              }
+
+              &::-webkit-scrollbar-thumb {
+                box-shadow: inset 0 0 0 0.4rem rgba(57, 58, 62, 0.9);
+                border: solid 0.16rem transparent;
+                background-color: transparent;
+              }
+
+              .Notification {
+                cursor: pointer;
+                padding-top: 2%;
+                margin-top: 3%;
+                box-sizing: border-box;
+                position: relative;
+                padding-bottom: 7px;
+
+                &:hover {
+                  filter: brightness(150%);
+                  background-color: rgba(65, 70, 79, 0.2);
+                }
+
+                .NotificationLink {
+                  letter-spacing: 0.005rem;
+                  color: #f2f3f3;
+                  height: 100%;
+
+                  &:hover {
+                    filter: contrast(60%) brightness(120%);
+                  }
+
+                  &:after {
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    height: 1px;
+                    width: 100%;
+                    background-color: rgba(57, 58, 62, 1);
+                  }
+
+                  .NotificationTitle {
+                    margin: 0;
+                    padding: 0;
+                    font-size: 0.76rem;
+                    position: relative;
+                    font-weight: 600;
+                    margin-bottom: 1%;
+                  }
+
+                  .NotificationTitle_WithCircle {
+                    &:before {
+                      width: 4px;
+                      height: 4px;
+                      content: "";
+                      display: block;
+                      position: absolute;
+                      left: -9px;
+                      top: 3px;
+                      background: #ff5a00;
+                      border-radius: 50%;
+                    }
+                  }
+
+                  .NotificationText {
+                    font-size: 0.7rem;
+                    line-height: 1.1;
+                    -ms-text-overflow: ellipsis;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    -ms-line-clamp: 2;
+                    -webkit-line-clamp: 2;
+                    display: -webkit-box;
+                    word-wrap: break-word;
+                    -webkit-box-orient: vertical;
+                    box-orient: vertical;
+                    overflow: hidden;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 960px) {
+  .Header {
+    grid-area: h;
+    grid-template-areas: "logo" "topMenu";
+    grid-template-columns: 100%;
+    justify-content: center;
+
+    .HeaderLogo {
+      padding-top: 3vw;
+
+      .LogoIconWrap {
+        width: 40vw;
+        margin: 0 auto;
+      }
+    }
+
+    .TopMenu {
+      width: 95%;
+      justify-content: space-between;
+
+      .TopMenuLink {
+        padding-top: 3vw;
+      }
+
+      .TopMenuLinkHovered {
+        border-top: 3px solid rgba(204, 186, 113, 0);
+        transition: none;
+      }
+
+      .Notifications {
+        padding-top: 3vw;
+        width: 15vw;
+        display: flex;
+        justify-content: flex-end;
+
+        .NotificationIconWrap {
+          .NotificationIconBox {
+            .NotificationIcon {
+              padding-left: 12vw;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .Header {
+    .TopMenu {
+      .TopMenuLink {
+
+        a {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .TopMenu {
+    .TopMenuLink {
+      a {
+        font-size: 2.6vw !important;
+      }
+    }
+
+    .NotificationIconWrap {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+
+      &:before {
+        top: calc(50% - 2px) !important;
+        height: 6px !important;
+      }
+
+      .NotificationIconBox {
+        padding-top: 6%;
+
+        .NotificationIcon {
+          width: 12px !important;
+          height: 14px !important;
+        }
+      }
+
+      .NotificationsPopupWrap {
+        top: 33px !important;
+      }
+
+      .NotificationsCircleWrap {
+        top: 2px !important;
+        right: -4px !important;
+        width: 10px !important;
+        height: 10px !important;
+
+        .NotificationsCircle {
+          width: 9px !important;
+          height: 9px !important;
+
+          span {
+            font-weight: 500 !important;
+            font-size: 0.4rem !important;
+            margin-top: 10%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 365px) {
+  .TopMenu {
+    .TopMenuLink {
+      a {
+        font-size: 8px !important;
+      }
+    }
+  }
+
+  .NotificationIcon {
+    padding-left: 8vw !important;
+  }
+}
+
+@media (max-width: 285px) {
+
+
+  .NotificationsPopupWrap {
+    width: 90vw !important;
+    margin-left: 1vw;
+
+    .NotificationTitle {
+      font-size: 0.66rem !important;
+    }
+
+    .NotificationText {
+      font-size: 0.6rem !important;
+      line-height: 1 !important;
+    }
+  }
+}
+
+// keyframes
+@keyframes slidein {
+  from {
+    left: 5%;
+    width: 20%;
+    height: 100%;
+  }
+
+  to {
+    left: -6%;
+    width: 45%;
+    height: 180%;
+  }
+}

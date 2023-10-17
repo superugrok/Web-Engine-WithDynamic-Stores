@@ -1,0 +1,531 @@
+.HowToPlaySliderWrap {
+  z-index: 99;
+  height: auto;
+  height: 100%;
+  min-height: 580px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  .HowToPlaySlider {
+    max-height: 727px;
+    width: 267px;
+    position: relative;
+    box-sizing: border-box;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-auto-rows: 27% 58% 14%;
+    background: no-repeat -43px -175px url("../../../assets/images/screens/Main/HowToPlaySlider/bgs__main-howtoplay-layer.png");
+
+    .SliderHeader {
+      padding-top: 2vw;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .HowToPlayIcon {
+        margin-bottom: 14px;
+        margin-left: -22px;
+      }
+
+      .HowToPlayTitle {
+        font-weight: 800;
+        font-size: 16px;
+        color: #d1dbf7;
+        text-transform: uppercase;
+        white-space: nowrap;
+        margin-left: -12px;
+        margin-bottom: 2px;
+      }
+    }
+
+    .SliderMainWrap {
+
+      .SliderMain {
+        height: 100%;
+        position: relative;
+
+        .BgBoxWrap {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 52.5%;
+          height: 100%;
+
+          .BgBox {
+            width: 100%;
+            height: 98%;
+            position: relative;
+            border: 1px solid #2c3440;
+            z-index: 2;
+            background: rgba(255, 255, 255, 0.02) no-repeat center center url("../../../assets/images/screens/Main/HowToPlaySlider/bgs__main-howtoplay.png");
+          }
+
+
+          // border-crosses
+          .BorderCrossTL,
+          .BorderCrossTR,
+          .BorderCrossBL,
+          .BorderCrossBR, {
+            cursor: pointer;
+            position: absolute;
+
+            &:before,
+            &:after {
+              content: "";
+              position: absolute;
+              width: 7px;
+              height: 1px;
+              background: #4d4e55;
+            }
+
+            &:after {
+              transform: rotate(-90deg);
+            }
+          }
+
+          .BorderCrossTL {
+            top: -1px;
+            left: -4px;
+          }
+
+          .BorderCrossTR {
+            top: -1px;
+            right: 3px;
+          }
+
+          .BorderCrossBL {
+            bottom: 0;
+            left: -4px;
+          }
+
+          .BorderCrossBR {
+            bottom: -1px;
+            right: 3px;
+          }
+        }
+
+        .SliderMainContent {
+          z-index: 3;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 200%;
+          height: 92%;
+
+          .ArrowLeft, .ArrowRight {
+            z-index: 99;
+            top: auto;
+            bottom: -98px;
+            position: absolute;
+
+            svg {
+              cursor: pointer;
+            }
+          }
+
+          .ArrowLeft {
+            display: block;
+            left: -2px;
+
+            svg {
+              width: 39px;
+              height: 19px;
+              fill: #87879b;
+            }
+          }
+
+          .ArrowRight {
+            display: block;
+            right: 97px;
+
+            svg {
+              width: 78px;
+              height: 19px;
+              fill: #efbd76;
+            }
+          }
+
+          .MainContentSlide {
+            height: 100%;
+            display: grid;
+            grid-template-columns: 100%;
+            grid-auto-rows: 40% 34% 22%;
+            padding: 0 0 0 28px;
+
+
+            .MainContentTitle {
+              margin-top: 35px;
+              display: flex;
+              align-items: flex-start;
+              line-height: 1.78;
+              font-size: 20px;
+              color: #fff;
+              text-transform: uppercase;
+
+              &:after {
+                width: 375px;
+                height: 243px;
+                content: ' ';
+                display: block;
+                position: absolute;
+                left: -55px;
+                top: -60px;
+                z-index: -1;
+                background: no-repeat center center url("../../../assets/images/screens/Main/HowToPlaySlider/bgs__main-howtoplay-title.png");
+              }
+            }
+
+            .MainContentDescription {
+              margin-bottom: 25px;
+              display: flex;
+              align-items: center;
+              line-height: 1.8;
+              //font-size: 14px;
+              color: #d9daee;
+              padding-bottom: 27px;
+            }
+
+            .MainContentStep {
+              white-space: nowrap;
+              background-image: -webkit-linear-gradient(
+                              0deg, rgb(24, 65, 242) 31%, rgb(15, 39, 149) 100%);
+              border-radius: 5px;
+              display: flex;
+              align-items: center;
+              position: relative;
+              width: 95%;
+
+              .StepText {
+                vertical-align: middle;
+                font-weight: 800;
+                font-size: 14px;
+                line-height: 1.7;
+                white-space: normal;
+                padding: 0 0 0 26px;
+                max-width: 90px;
+              }
+
+              .StepIconWrap {
+                width: 74px;
+                height: 69px;
+                line-height: 69px;
+                position: absolute;
+                right: 16px;
+                bottom: -11px;
+                text-align: center;
+                border: 1px solid rgb(109, 212, 255);
+                background-color: rgb(24, 187, 255);
+                border-radius: 5px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              }
+            }
+          }
+        }
+
+        // styles for slider-library containers
+        .SliderMainContent > div,
+        .SliderMainContent > div > div,
+        .SliderMainContent > div > div > div,
+        .SliderMainContent > div > div > div > div {
+          height: 100%;
+        }
+      }
+    }
+
+    .SliderNav {
+      height: 100%;
+      display: flex;
+      align-items: center;
+
+
+      .NavStepName {
+        font-weight: 500;
+        font-size: 11px;
+        color: #efbd76;
+        text-transform: uppercase;
+        margin-left: 53px;
+      }
+    }
+  }
+}
+
+
+@media (max-width: 1270px) {
+  .HowToPlaySliderWrap {
+    height: 680px !important;
+
+    .HowToPlaySlider {
+      background: no-repeat -43px -226px url("../../../assets/images/screens/Main/HowToPlaySlider/bgs__main-howtoplay-layer.png");
+
+      .ArrowLeft, .ArrowRight {
+        z-index: 99;
+        top: auto;
+        bottom: -92px !important;
+        position: absolute;
+
+        svg {
+          cursor: pointer;
+        }
+      }
+    }
+
+    .MainContentTitle {
+      font-size: 16px !important;
+    }
+  }
+}
+
+@media (max-width: 1130px) {
+  .HowToPlaySliderWrap {
+    position: relative !important;
+    justify-content: center !important;
+    height: auto;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    right: 0;
+    top: -40px;
+    bottom: 0;
+    /*background: no-repeat 12px -18px url("../../../assets/images/screens/Main/HowToPlaySlider/bgs__main-howtoplay-layer.png");*/
+
+    .HowToPlaySlider {
+      height: 90%;
+      width: 267px;
+      position: relative;
+      grid-auto-rows: 20% 55% 25%;
+      background: no-repeat 200% -310px url("../../../assets/images/screens/Main/HowToPlaySlider/bgs__main-howtoplay-layer.png");
+
+
+      .SliderHeader {
+        .HowToPlayIcon {
+          margin-bottom: 12px;
+          margin-left: -18px;
+          width: 62px;
+          height: 59px;
+        }
+
+        .HowToPlayTitle {
+          font-weight: 800;
+          font-size: 14px;
+          color: #d1dbf7;
+          text-transform: uppercase;
+          white-space: nowrap;
+          margin-right: 32px;
+          margin-bottom: 2px;
+        }
+      }
+
+      .SliderMainWrap {
+        //margin-left: 40px;
+
+        .SliderMain {
+          height: 100%;
+          position: relative;
+
+          .BgBoxWrap {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 52.5%;
+            height: 100%;
+
+            .BgBox {
+              width: 100%;
+              height: 98%;
+              position: relative;
+              border: 1px solid #2c3440;
+              z-index: 2;
+              background: rgba(255, 255, 255, 0.02) no-repeat center center url("../../../assets/images/screens/Main/HowToPlaySlider/bgs__main-howtoplay.png");
+            }
+          }
+
+          .SliderMainContent {
+            z-index: 3;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 200%;
+            height: 92%;
+
+            .MainContentSlide {
+              height: 100%;
+              display: grid;
+              grid-template-columns: 100%;
+              grid-auto-rows: 40% 34% 22%;
+              padding: 0 0 0 28px;
+
+
+              .MainContentTitle {
+                margin-top: 35px;
+                display: flex;
+                align-items: flex-start;
+                line-height: 1.78;
+                font-size: 20px;
+                color: #fff;
+                text-transform: uppercase;
+
+                &:after {
+                  width: 375px;
+                  height: 243px;
+                  content: ' ';
+                  display: block;
+                  position: absolute;
+                  left: -55px;
+                  top: -60px;
+                  z-index: -1;
+                  background: no-repeat center center url("../../../assets/images/screens/Main/HowToPlaySlider/bgs__main-howtoplay-title.png");
+                }
+              }
+
+              .MainContentDescription {
+                padding-bottom: 0;
+              }
+
+              .MainContentStep {
+                white-space: nowrap;
+                background-image: -webkit-linear-gradient(
+                                0deg, rgb(24, 65, 242) 31%, rgb(15, 39, 149) 100%);
+                border-radius: 5px;
+                display: flex;
+                align-items: center;
+                position: relative;
+                width: 95%;
+
+                .StepText {
+                  vertical-align: middle;
+                  font-weight: 800;
+                  font-size: 14px;
+                  line-height: 1.7;
+                  white-space: normal;
+                  padding: 0 0 0 26px;
+                  max-width: 90px;
+                }
+
+                .StepIconWrap {
+                  width: 44px;
+                  height: 41px;
+                  line-height: 69px;
+                  position: absolute;
+                  right: 16px;
+                  bottom: -11px;
+                  text-align: center;
+                  border: 1px solid rgb(109, 212, 255);
+                  background-color: rgb(24, 187, 255);
+                  border-radius: 5px;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                }
+              }
+            }
+
+            .ArrowLeft, .ArrowRight {
+              bottom: -107px !important;
+            }
+
+            .ArrowLeft {
+              left: 47px;
+            }
+            .ArrowRight {
+              right: 49px;
+            }
+
+          }
+        }
+      }
+
+      .SliderNav {
+        display: flex;
+        align-items: flex-start;
+        padding-top: 60px;
+        justify-content: center !important;
+        margin-left: 0 !important;
+        padding-right: 82px;
+      }
+    }
+  }
+}
+
+@media (max-width: 960px) {
+  .HowToPlaySliderWrap {
+    z-index: 1;
+  }
+}
+
+@media (max-width: 560px) {
+  .HowToPlaySlider {
+    /*width: 70% !important;*/
+
+    .StepIconWrap {
+      right: 14px !important;
+      width: 44px !important;
+      height: 41px !important;
+    }
+  }
+}
+
+@media (max-width: 350px) {
+
+  .HowToPlaySliderWrap {
+
+    .HowToPlaySlider {
+      width: 90% !important;
+      background: no-repeat 50% -310px url("../../../assets/images/screens/Main/HowToPlaySlider/bgs__main-howtoplay-layer.png");
+
+      .HowToPlayTitle {
+        margin-left: -4px !important;
+        font-size: 12px !important;
+      }
+
+      .MainContentSlide {
+        padding: 0 0 0 10px !important;
+
+        .MainContentStep {
+          max-width: 220px;
+
+          .StepText {
+            font-size: 12px !important;
+            padding: 0 0 0 10px !important;
+          }
+        }
+
+      }
+
+      .SliderNav {
+        margin-left: 0 !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 326px) {
+  .ArrowLeft {
+    left: 8vw !important;
+  }
+  .ArrowRight {
+    right: 8.2vw !important;
+  }
+}
+
+@media (max-width: 280px) {
+  .ArrowLeft {
+    left: 4vw !important;
+  }
+  .ArrowRight {
+    right: 3vw !important;
+  }
+}

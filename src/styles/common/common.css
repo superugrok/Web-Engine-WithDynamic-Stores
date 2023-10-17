@@ -1,0 +1,38 @@
+html,
+body,
+[id="root"] {
+  color: #fff;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+}
+
+/*body:after, body:before {
+  max-width: 52%;
+  content: ' ';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  background-size: contain !important;
+  box-sizing: border-box;
+  z-index: 2;
+}
+body:before {
+  box-sizing: border-box;
+  width: 967px;
+  height: 926px;
+  max-height: 100%;
+  right: 0;
+  background: no-repeat right bottom url('../../assets/images/common/bgs__body-rb.png');
+}
+body:after {
+  width: 967px;
+  height: 926px;
+  max-height: 100%;
+  left: 0;
+  background: no-repeat 0 bottom url('../../assets/images/common/bgs__body-lb.png');
+}*/

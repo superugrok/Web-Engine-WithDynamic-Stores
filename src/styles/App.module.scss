@@ -1,0 +1,126 @@
+.App {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  //min-height: 100vh;
+  background: #1c2027 no-repeat center 0
+    url("../assets/images/components/appComponents/bodyBg.jpg");
+  background-size: 100% auto;
+  //padding: 0 5% 0 4%;
+  padding: 0 5% 0 4vw;
+  box-sizing: border-box;
+  font: 400 14px "Montserrat", Arial, Helvetica, sans-serif;
+  line-height: 1.2;
+  color: #fff;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  .AppContent {
+    height: 100%;
+    z-index: 3;
+    //background-attachment: fixed;
+    display: grid;
+    grid-template-areas: "h" "m" "f";
+    grid-template-columns: 100%;
+    grid-auto-rows: 105px auto 105px;
+    opacity: 0.6;
+    position: relative;
+    min-height: 100vh;
+  }
+}
+
+.AppContentAnimation_Off {
+  animation: none;
+}
+.AppContentAnimation_On {
+  animation: 0.6s opacity-06_10;
+  opacity: 1 !important;
+  animation-fill-mode: forwards;
+}
+@keyframes opacity-06_10 {
+  from {
+    opacity: 0.6;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+.App:after, .App:before {
+  max-width: 52%;
+  content: ' ';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  background-size: contain !important;
+  box-sizing: border-box;
+  z-index: 1;
+}
+.App:before {
+  box-sizing: border-box;
+  width: 967px;
+  height: 926px;
+  max-height: 100%;
+  right: 0;
+  background: no-repeat right bottom url('../assets/images/common/bgs__body-rb.png');
+}
+.App:after {
+  width: 967px;
+  height: 926px;
+  max-height: 100%;
+  left: 0;
+  background: no-repeat 0 bottom url('../assets/images/common/bgs__body-lb.png');
+}
+
+@media (max-width: 1130px) {
+  .App {
+    grid-auto-rows: 130px auto 220px;
+
+    .AppContent {
+      grid-auto-rows: 130px auto 220px;
+    }
+  }
+}
+
+@media (max-width: 960px) {
+  .App {
+    padding: 0 2%;
+
+    .AppContent {
+      grid-auto-rows: 170px auto 190px;
+    }
+  }
+}
+
+@media (max-width: 680px) {
+  .App {
+    padding: 0 2%;
+  }
+}
+
+@media (max-width: 650px) {
+  .App {
+    box-sizing: border-box;
+
+    padding: 0 2%;
+  }
+}
+
+@media (max-width: 400px) {
+  .App {
+    grid-auto-rows: 80px auto 170px;
+    padding: 0 4%;
+    font: 500 12px "Montserrat", Arial, Helvetica, sans-serif;
+
+    .AppContent {
+      grid-auto-rows: 80px auto 170px;
+
+      .MainSection {
+        padding-top: 12vw !important;
+      }
+    }
+  }
+}
+
+
